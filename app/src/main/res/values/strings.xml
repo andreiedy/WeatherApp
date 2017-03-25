@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Friendly Weather</string>
+
+    <string name="emptyString" translatable="false">-</string>
+    <string name="cityCountryText">City, Country</string>
+    <string name="okString" translatable="false">OK</string>
+    <string name="search_for_a_city">Search for a city</string>
+    <string name="cloudy">A picnic sounds good</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="centigrade" translatable="false">°C</string>
+    <string name="fahrenheit" translatable="false">°F</string>
+    <string name="kelvin" translatable="false">°K</string>
+    <string name="pressure" translatable="false">hPa</string>
+    <string name="humidity" translatable="false">%</string>
+    <string name="permission">Displaying default location information</string>
+    <string name="cityNotFound">City not found</string>
+    <string name="today">Today</string>
+    <string name="myLocation">Weather for current location</string>
+    <string name="data_date">Date of data:</string>
+    <string name="aboutText">About</string>
+    <string name="my_email" translatable="false">andrei.edouard@yahoo.com</string>
+    <string name="created_by">Created By</string>
+    <string name="myName" translatable="false">Edouard-Stefanita Andrei</string>
+    <string name="tutorial_get_current_location"><![CDATA[<--- Get info of \n current  location]]></string>
+    <string name="tutorial_search_page">Access --->\n search page</string>
+    <string name="tutorial_sync"><![CDATA[Button to get\n latest data\n --->]]></string>
+    <string name="tutorial_about"><![CDATA[Button to access\n about page\n<---     ]]></string>
+    <string name="tutorial_swipe_info">Swipe to the right to search for a city\n or use the search button\n\n swipe left to return here\n if you\'ve changed your mind</string>
+    <string name="sent_through_app">Sent through about page of Friendly Weather</string>
+
+    <string-array name="sunWarm">
+        <item>Picnic time!</item>
+        <item>Go for a ride!</item>
+        <item>A walk in the park.</item>
+    </string-array>
+    <string-array name="sunCold">
+        <item>Time you took a coat.</item>
+        <item>Be bold, not cold.</item>
+        <item>Scarf and cap.</item>
+    </string-array>
+    <string-array name="rainWarm">
+        <item>Grab an umbrella!</item>
+        <item>We vote for a raincoat!</item>
+        <item>Shirt and umbrella.</item>
+    </string-array>
+    <string-array name="rainCold">
+        <item>Better remain dry!</item>
+        <item>Stay warm, evade the storm.</item>
+        <item>Don\'t stay out too long. </item>
+    </string-array>
+    <string-array name="snowWarm">
+        <item>Snowball fight!</item>
+        <item>Do you wanna build a ⛄?</item>
+        <item>Mountainside trip.</item>
+    </string-array>
+    <string-array name="snowCold">
+        <item>Hot coco at home.</item>
+        <item>Brr, freeezin\'</item>
+        <item>Breathing ice.</item>
+    </string-array>
+    <string-array name="mist">
+        <item>Can you see me?</item>
+        <item>Not sure if smoke or mist.</item>
+        <item>Plot twist: plenty of mist!</item>
+    </string-array>
+</resources>

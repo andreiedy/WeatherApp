@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edouard.weatherapp.MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/searchButton"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:contentDescription="@string/search_for_a_city"
+        android:onClick="addLocation"
+        app:srcCompat="@android:drawable/ic_menu_search"
+        />
+
+    <TextView
+        android:id="@+id/locationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchButton"
+        android:layout_centerHorizontal="true"
+        android:text="@string/emptyString"
+        android:textAlignment="gravity"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/iconView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/emptyString"
+        android:textAlignment="gravity"
+        android:textSize="50sp"
+        />
+
+    <TextView
+        android:id="@+id/temperatureView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/emptyString"
+        android:textAlignment="gravity"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/pressureView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/emptyString"
+        android:textAlignment="gravity"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/humidityView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pressureView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/emptyString"
+        android:textAlignment="gravity"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/funnyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidityView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="0dip"
+        android:gravity="center"
+        android:text="@string/emptyString"
+        android:textSize="30sp"
+        />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/syncButton"
+        tools:visibility="gone"
+        android:layout_below="@+id/funnyTextView"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="0.15"
+            >
+
+            <TextView
+                android:id="@+id/tempMax1"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMax"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/tempMax2"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMax"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/tempMax3"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMax"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/tempMax4"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMax"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/tempMax5"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMax"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="0.35"
+            >
+
+            <TextView
+                android:id="@+id/tempMin1"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMin"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/tempMin2"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMin"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/tempMin3"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMin"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/tempMin4"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMin"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/tempMin5"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/tempMin"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="0.25"
+            >
+
+            <TextView
+                android:id="@+id/icon1"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/icon2"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/icon3"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/icon4"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/icon5"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                >
+
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="0.25"
+
+            >
+
+            <TextView
+                android:id="@+id/day1"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/day2"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/day3"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/day4"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/day5"
+                android:layout_margin="0dp"
+                android:layout_weight="0.20"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/getCurrentLocationInfo"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:contentDescription="@string/myLocation"
+        android:onClick="getCurrentLocationInfo"
+        app:srcCompat="@android:drawable/ic_menu_myplaces"
+        />
+
+    <TextView
+        android:id="@+id/aboutView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@id/syncButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:onClick="onAboutClick"
+        android:text="@string/aboutText"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/dataDateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/syncButton"
+        android:layout_alignTop="@id/syncButton"
+        android:layout_toLeftOf="@+id/syncButton"
+        android:layout_toStartOf="@+id/syncButton"
+        android:gravity="center"
+        android:text="@string/emptyString"
+        android:textSize="12sp"
+        />
+
+    <Button
+        android:id="@+id/syncButton"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/sync_icon"
+        android:onClick="syncData"
+        />
+
+    <RelativeLayout
+        android:id="@+id/tutorialView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:background="#D9000000"
+        >
+
+        <Button
+            android:id="@+id/tutorialOkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#20FFFFFF"
+            android:onClick="onTutorialOkClick"
+            android:text="@string/okString"
+            />
+
+        <TextView
+            android:id="@+id/tutorialSwipeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:text="@string/tutorial_swipe_info"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tutorialAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tutorialAppIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="25sp"
+            />
+
+        <ImageView
+            android:id="@+id/tutorialAppIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tutorialSwipeTextView"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@mipmap/weather_launcher"
+            />
+
+        <TextView
+            android:id="@+id/tutorialMyLocationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tutorial_get_current_location"
+            android:textSize="15sp"
+            android:layout_alignBaseline="@+id/tutorialSearchText"
+            android:layout_alignBottom="@+id/tutorialSearchText"
+            android:layout_toLeftOf="@+id/tutorialAppIcon"
+            android:layout_toStartOf="@+id/tutorialAppIcon"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tutorialSearchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="62dip"
+            android:layout_marginRight="62dip"
+            android:layout_marginTop="26dip"
+            android:gravity="center"
+            android:text="@string/tutorial_search_page"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tutorialSyncText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center"
+            android:text="@string/tutorial_sync"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tutorialAboutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginStart="10dip"
+            android:gravity="center"
+            android:text="@string/tutorial_about"
+            android:textSize="15sp"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

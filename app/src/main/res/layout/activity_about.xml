@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edouard.weatherapp.AboutActivity"
+    >
+
+
+    <TextView
+        android:id="@+id/createdByView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_above="@+id/myNameView"
+        android:layout_marginBottom="30dip"
+        android:text="@string/created_by"
+        />
+
+    <TextView
+        android:id="@+id/myNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="@string/myName"
+        android:layout_above="@+id/myEmailView"
+        android:layout_marginBottom="30dip"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/myEmailView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="@string/my_email"
+        android:onClick="onEmailClick"
+        android:textAllCaps="false"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_below="@+id/myEmailView"
+        android:layout_alignStart="@+id/myEmailView"
+        android:layout_alignLeft="@+id/myEmailView"
+        android:layout_alignEnd="@+id/myEmailView"
+        android:layout_alignRight="@+id/myEmailView"
+        />
+
+    <Button
+        android:id="@+id/backButton"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back_arrow"
+        android:onClick="backHome"
+        />
+
+</RelativeLayout>

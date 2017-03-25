@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Friendly Weather</string>
+    <string name="aboutText">Despre</string>
+    <string name="cityCountryText">Oraș, Țară</string>
+    <string name="cityNotFound">Nu am găsit orașul</string>
+    <string name="created_by">Creat de</string>
+    <string name="data_date">Dată info:</string>
+    <string name="myLocation">Vreme locație curentă</string>
+    <string name="search_for_a_city">Caută oraș</string>
+    <string name="sent_through_app">Trimis din Friendly Weather</string>
+    <string name="title_activity_settings">Setări</string>
+    <string name="today">Astăzi</string>
+    <string name="tutorial_swipe_info">Glisați dreapta pentru a cauta un oraș \n\nGlisați stanga pentru a va întoarce aici</string>
+    <string name="tutorial_sync"><![CDATA[Sincronizați--->]]></string>
+    <string name="cloudy">Un picnic sună bine</string>
+    <string name="tutorial_about"><![CDATA[Buton contact<---     ]]></string>
+    <string name="tutorial_get_current_location"><![CDATA[<--- Informații\n locație curentă]]></string>
+    <string name="tutorial_search_page">Acces --->\n pagină căutare</string>
+    <string name="permission">Afișare informatiile locației predefinite</string>
+
+    <string-array name="sunWarm">
+        <item>Vreme de picnic!</item>
+        <item>Hai la plimbare!</item>
+        <item>Vizitezi parcul?</item>
+    </string-array>
+    <string-array name="sunCold">
+        <item>Îmbracă-te bine!</item>
+        <item>Pune ceva pe tine!</item>
+        <item>Soare, dar răcoare</item>
+    </string-array>
+    <string-array name="rainWarm">
+        <item>Ia o umbrela!</item>
+        <item>Trebuie ceva cu gluga!</item>
+        <item>Tricou si umbrela</item>
+    </string-array>
+    <string-array name="rainCold">
+        <item>Better remain dry!</item>
+        <item>Stay warm, evade the storm.</item>
+        <item>Don\'t stay out too long. </item>
+    </string-array>
+    <string-array name="snowWarm">
+        <item>Snowball fight!</item>
+        <item>Do you wanna build a ⛄?</item>
+        <item>Mountainside trip.</item>
+    </string-array>
+    <string-array name="snowCold">
+        <item>Hot coco at home.</item>
+        <item>Brr, freeezin\'</item>
+        <item>Breathing ice.</item>
+    </string-array>
+    <string-array name="mist">
+        <item>Can you see me?</item>
+        <item>Not sure if smoke or mist.</item>
+        <item>Plot twist: plenty of mist!</item>
+    </string-array>
+</resources>

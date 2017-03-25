@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#216af3</color>
+    <color name="colorPrimaryDark">#174aaa</color>
+    <color name="colorAccent">#0054f3</color>
+    <color name="tempMax">#ef412a</color>
+    <color name="tempMin">#5196b3</color>
+</resources>
